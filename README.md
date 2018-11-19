@@ -10,7 +10,8 @@
 	example:
 		we have five numbers,and we want to sort them in a birth order
 		and we should have to sort 4 times(numbers-1)
-	secondly,each small number put in the front(Warning: the front location depend on the iteration if you have choosen two 	small numbers and the following loop about the smallest index is (3-1))
+	secondly,each small number put in the front(Warning: the front location depend on the iteration 
+	if you have choosen two small numbers and the following loop about the smallest index is (3-1))
 	lastly,the coding is static and you should define an array of a personally.
 	the source of coding named selectSearch.py
 ***********************************
