@@ -22,4 +22,5 @@
 	will give resursive operation in the later.If there have something wrong
 	you can send me a email,and tell where is wrong and how to modify,I will
 	grateful for you!
+	the resursive version is already submitted.the coding file name is Euclid_resursive.py
 **********************************
