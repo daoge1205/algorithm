@@ -20,7 +20,7 @@ int kmp_compare(char* input_words,char* formal_words,int* next){
     int counter=0;
     for(int i=0;i<=distance;i++){
         int result;
-        result=find_begin_index(i,i_length,input_words,formal_words,next);//·µ»Ø-1¾Í±¨´í
+        result=find_begin_index(i,i_length,input_words,formal_words,next);//è¿”å›ž-1å°±æŠ¥é”™
         if(result!=-1){
             if(deep==0)
                 stack[deep++]=result;
@@ -45,7 +45,6 @@ int find_begin_index(int begin,int end,char* input_words,char* formal_words,int*
             if(input_words[i]==formal_words[m]){
                 if(m+1==strlen(formal_words)){
                     tag = i+1-strlen(formal_words);
-                    printf("·µ»ØµãÎª%d ",tag);
                     return tag;
                 }
                 m++;
@@ -66,20 +65,18 @@ int find_begin_index(int begin,int end,char* input_words,char* formal_words,int*
 }
 void main(){
     int number;
-    printf("ÊäÈëÒ»¸öÊý×Ö:");
     scanf("%d",&number);
+    int output[number];
     for(int i=0;i<number;i++){
-            char formal_words[20];
-            printf("ÊäÈëÄ£ÐÍ:");
+            char formal_words[10000];
             scanf("%s",formal_words);
-            char input_words[128];
-
+            char input_words[1000000];
             scanf("%s",input_words);
             int length = strlen(formal_words);
             int next[length];
             initial_next(formal_words,length,next);
-
-            int tmp=kmp_compare(input_words,formal_words,next);
-            printf("%d\n",tmp);
+            output[i]=kmp_compare(input_words,formal_words,next);
     }
+    for(int i=0;i<number;i++)
+        printf("%d \n",output[i]);
 }
